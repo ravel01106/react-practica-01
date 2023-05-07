@@ -2,10 +2,11 @@ import {Fragment} from 'react';
 import styles from './Card.module.css';
 import propTypes from 'prop-types';
 import {IoIosMan} from 'react-icons/io';
-import {FaUserAstronaut} from 'react-icons/fa';
+import {FaUserAstronaut, FaCommentDots} from 'react-icons/fa';
 import {BiMaleSign, BiFemaleSign} from 'react-icons/bi';
 import {MdLocationOn} from 'react-icons/md';
 import {AiFillCalendar} from 'react-icons/ai';
+import {BsFillPersonFill} from 'react-icons/bs';
 
 const Card = ({character}) => {
     const months = ["January", "February", "March", 
@@ -25,25 +26,31 @@ const Card = ({character}) => {
     }
     const isHuman = character.species === 'Human';
     const isFemale = character.gender === 'Female';
-    const iconsStyle = {color: '#0B6EFD'};
+    const detailsStyle = {color: '#0B6EFD'};
+    const commentStyle = {color: 'white'};
+    const isAlive = character.status === 'Alive';
 
     return (
 
     <Fragment>
         <div className={styles.Card}>
-            <div className={styles.Presentation}>
+            <div className={styles.InLine}>
                 <img className={styles.Photo} src={`./images/${character.id}.jpeg`} alt="#" />
                 <div className={styles.NameAndStatus}>
                     <p className={styles.Name}>{character.name}</p>
-                    <p>{character.status}</p>
+                    {isAlive ? <p className={styles.Green}>{character.status}</p> : <p className={styles.Red}>{character.status}</p>}
                 </div>
 
             </div>
             <div className={styles.Details}>
-                <p>{isHuman ? <IoIosMan style={iconsStyle}/> : <FaUserAstronaut style={iconsStyle}/>} {character.species}</p>
-                <p>{isFemale ? <BiFemaleSign style={iconsStyle}/> : <BiMaleSign style={iconsStyle}/>} {character.gender}</p>
-                <p><MdLocationOn style={iconsStyle}/> {character.location}</p>
-                <p><AiFillCalendar style={iconsStyle}/> {formatCreated()}</p>
+                <p>{isHuman ? <IoIosMan style={detailsStyle}/> : <FaUserAstronaut style={detailsStyle}/>} {character.species}</p>
+                <p>{isFemale ? <BiFemaleSign style={detailsStyle}/> : <BiMaleSign style={detailsStyle}/>} {character.gender}</p>
+                <p><MdLocationOn style={detailsStyle}/> {character.location}</p>
+                <p><AiFillCalendar style={detailsStyle}/> {formatCreated()}</p>
+            </div>
+            <div className={styles.Buttons}>
+                <button className={styles.Profile}><BsFillPersonFill /> Perfil</button>
+                <button className={styles.Contact}><FaCommentDots style={commentStyle}/> Contacto</button>
             </div>
         </div>
     </Fragment>

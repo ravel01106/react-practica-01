@@ -2,22 +2,22 @@
     background-color: white;
     color: rgb(102, 102, 102);
     width: 82vh;
-    height: 40vh;
+    height: 44vh;
     text-align: left;
     padding: 2vh;
     border: white solid 2px;
     border-radius: 20px;
 }
 .Photo{
-    width: 12vh;
-    height: 12vh;
+    width: 9vh;
+    height: 9vh;
     border: solid rgb(241, 242, 246) 5px;
     border-radius: 50%;
 }
-p{
-    font-size: 2.5vh;
+p, button{
+    font-size: 2vh;
 }
-.Presentation{
+.InLine{
     display: inline-flex;
     align-items: center;
 }
@@ -25,10 +25,62 @@ p{
     padding-left: 2vh;
 }
 .Name{
-    font-size: 2.8vh;
+    font-size: 2.5vh;
     color: black;
     font-weight: bold;
 }
+.Details{
+    margin-top: 4.5vh;
+}
 .Details p{
-    margin:  1vh 0vh;
+    margin:  1.5vh 0vh;
+}
+.Buttons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vh;
+    margin-top: 8vh;
+    justify-content: center;
+}
+button{
+    padding: 0.9vh 15vh;
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5vh;
+}
+.Profile{
+    background-color: #E8E9EC;
+    border-top: 2px #E8E9EC solid;
+    border-left: 2px #E8E9EC solid;
+    border-bottom: 2px #969697 solid;
+    border-right: 2px #969697 solid;
+}
+.Contact{
+    color: white;
+    background-color: #0B6EFC;
+    border-top: 2px #0B6EFC solid;
+    border-left: 2px #0B6EFC solid;
+    border-bottom: 2px #0849A9 solid;
+    border-right: 2px #0849A9 solid;
+}
+.Red{
+    margin-top: 0.2vh;
+    color: red;
+    background-color: #f6eeee;
+    border: 2px solid #f6eeee;
+    font-size: 1.3vh;
+    text-align: center;
+    width: 5.3vh;
+    border-radius: 20px;
+}
+.Green{
+    margin-top: 0.2vh;
+    color: green;
+    background-color: #EEF6EF;
+    border: 2px solid #EEF6EF;
+    font-size: 1.3vh;
+    text-align: center;
+    width: 5.3vh;
+    border-radius: 20px;
 }
