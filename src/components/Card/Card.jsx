@@ -9,18 +9,11 @@ import {AiFillCalendar} from 'react-icons/ai';
 import {BsFillPersonFill} from 'react-icons/bs';
 
 const Card = ({character}) => {
-    const months = ["January", "February", "March", 
-        "April", "May", "June", "July", "August", "September", 
-        "October", "November", "December"];
-    const days = ["Sunday", "Monday", "Tuesday",
-        "Wednesday", "Thursday", "Friday", "Saturday"];
 
     const formatCreated = () => {
-
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
         const dateCharacter = new Date(character.created);
-        const dateFormat = days[dateCharacter.getDay()] + ", " +
-            dateCharacter.getDate() + " de " + months[dateCharacter.getMonth()]
-            + " de " + dateCharacter.getFullYear();
+        const dateFormat = dateCharacter.toLocaleDateString('es-Es', options);
         return dateFormat;
 
     }
@@ -35,7 +28,7 @@ const Card = ({character}) => {
     <Fragment>
         <div className={styles.Card}>
             <div className={styles.InLine}>
-                <img className={styles.Photo} src={`./images/${character.id}.jpeg`} alt="#" />
+                <img className={styles.Photo} src={`./images/${character.id}.jpeg`} alt='#' />
                 <div className={styles.NameAndStatus}>
                     <p className={styles.Name}>{character.name}</p>
                     {isAlive ? <p className={styles.Green}>{character.status}</p> : <p className={styles.Red}>{character.status}</p>}
