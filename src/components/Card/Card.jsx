@@ -1,6 +1,11 @@
 import {Fragment} from 'react';
 import styles from './Card.module.css';
 import propTypes from 'prop-types';
+import {IoIosMan} from 'react-icons/io';
+import {FaUserAstronaut} from 'react-icons/fa';
+import {BiMaleSign, BiFemaleSign} from 'react-icons/bi';
+import {MdLocationOn} from 'react-icons/md';
+import {AiFillCalendar} from 'react-icons/ai';
 
 const Card = ({character}) => {
     const months = ["January", "February", "March", 
@@ -18,6 +23,8 @@ const Card = ({character}) => {
         return dateFormat;
 
     }
+    const isHuman = character.species === 'Human';
+    const isFemale = character.gender === 'Female';
 
     return (
 
@@ -28,10 +35,10 @@ const Card = ({character}) => {
                 <p>{character.status}</p>
             </div>
             <div>
-                <p>{character.species}</p>
-                <p>{character.gender}</p>
-                <p>{character.location}</p>
-                <p>{formatCreated()}</p>
+                <p>{isHuman ? <IoIosMan /> : <FaUserAstronaut />} {character.species}</p>
+                <p>{isFemale ? <BiFemaleSign /> : <BiMaleSign />} {character.gender}</p>
+                <p><MdLocationOn /> {character.location}</p>
+                <p><AiFillCalendar /> {formatCreated()}</p>
             </div>
         </div>
     </Fragment>
