@@ -1,53 +1,53 @@
 .Card{
     background-color: white;
-    color: rgb(102, 102, 102);
-    width: 82vh;
-    height: 44vh;
+    color: #666666;
+    width: 35.4rem;
+    height: 17.5rem;
     text-align: left;
-    padding: 2vh;
+    padding: 0.7rem;
     border: white solid 2px;
     border-radius: 20px;
 }
 .Photo{
-    width: 9vh;
-    height: 9vh;
-    border: solid rgb(241, 242, 246) 5px;
+    width: 3.5rem;
+    height: 3.5rem;
+    border: solid #F1F2F6 5px;
     border-radius: 50%;
 }
 p, button{
-    font-size: 2vh;
+    font-size: 0.9rem;
 }
 .InLine{
     display: inline-flex;
     align-items: center;
 }
 .NameAndStatus{
-    padding-left: 2vh;
+    padding-left: 0.8rem;
 }
 .Name{
-    font-size: 2.5vh;
+    font-size: 1rem;
     color: black;
     font-weight: bold;
 }
 .Details{
-    margin-top: 4.5vh;
+    margin-top: 2rem;
 }
 .Details p{
-    margin:  1.5vh 0vh;
+    margin:  0.7rem 0rem;
 }
 .Buttons{
     display: flex;
     flex-wrap: wrap;
-    gap: 1vh;
-    margin-top: 8vh;
+    gap: 0.5rem;
+    margin-top: 2.3rem;
     justify-content: center;
 }
 button{
-    padding: 0.9vh 15vh;
+    padding: 0.3rem 6.65rem;
     display: inline-flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 0.5vh;
+    gap: 0.2rem;
 }
 .Profile{
     background-color: #E8E9EC;
@@ -55,6 +55,7 @@ button{
     border-left: 2px #E8E9EC solid;
     border-bottom: 2px #969697 solid;
     border-right: 2px #969697 solid;
+    border-radius: 3px;
 }
 .Contact{
     color: white;
@@ -63,24 +64,25 @@ button{
     border-left: 2px #0B6EFC solid;
     border-bottom: 2px #0849A9 solid;
     border-right: 2px #0849A9 solid;
+    border-radius: 3px;
 }
 .Red{
-    margin-top: 0.2vh;
+    margin-top: 0.1rem;
     color: red;
     background-color: #f6eeee;
     border: 2px solid #f6eeee;
-    font-size: 1.3vh;
+    font-size: 0.6rem;
     text-align: center;
-    width: 5.3vh;
+    width: 1.9rem;
     border-radius: 20px;
 }
 .Green{
-    margin-top: 0.2vh;
+    margin-top: 0.1rem;
     color: green;
     background-color: #EEF6EF;
     border: 2px solid #EEF6EF;
-    font-size: 1.3vh;
+    font-size: 0.6rem;
     text-align: center;
-    width: 5.3vh;
+    width: 1.9rem;
     border-radius: 20px;
 }
