@@ -7,7 +7,7 @@ const Footer = ({year}) => {
   return (
     <Fragment>
         <div className={styles.Footer}>
-            <p> <AiOutlineCopyright /> {year} All right reserved </p>
+            <p className={styles.Text}> <AiOutlineCopyright /> {year} All right reserved </p>
         </div>
     </Fragment>
   )

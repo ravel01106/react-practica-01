@@ -2,4 +2,10 @@
     color: white;
     background-color: black;
     margin-top: auto;
+    padding: 0.25rem;
+}
+.Text{
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
 }

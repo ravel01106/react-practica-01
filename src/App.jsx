@@ -75,7 +75,7 @@ function App () {
   }
   const character = chooseCharacter();
   const dateCurrent = new Date();
-  const year = dateCurrent.getFullYear;
+  const year = dateCurrent.getFullYear();
   return (
     <div className='site-container'>
       <Header title='Tema 05' subtitle='Práctica 01' />

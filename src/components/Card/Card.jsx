@@ -54,7 +54,7 @@ const Card = ({character}) => {
             </div>
         </div>
     </Fragment>
-    
+
     )
 }
 Card.propTypes = {
