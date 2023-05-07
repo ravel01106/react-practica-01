@@ -1,5 +1,34 @@
 .Card{
-    background-color: aqua;
-    width: 75vh;
-    height: 45vh;
+    background-color: white;
+    color: rgb(102, 102, 102);
+    width: 82vh;
+    height: 40vh;
+    text-align: left;
+    padding: 2vh;
+    border: white solid 2px;
+    border-radius: 20px;
+}
+.Photo{
+    width: 12vh;
+    height: 12vh;
+    border: solid rgb(241, 242, 246) 5px;
+    border-radius: 50%;
+}
+p{
+    font-size: 2.5vh;
+}
+.Presentation{
+    display: inline-flex;
+    align-items: center;
+}
+.NameAndStatus{
+    padding-left: 2vh;
+}
+.Name{
+    font-size: 2.8vh;
+    color: black;
+    font-weight: bold;
+}
+.Details p{
+    margin:  1vh 0vh;
 }

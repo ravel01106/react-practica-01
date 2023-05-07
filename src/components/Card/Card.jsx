@@ -25,20 +25,25 @@ const Card = ({character}) => {
     }
     const isHuman = character.species === 'Human';
     const isFemale = character.gender === 'Female';
+    const iconsStyle = {color: '#0B6EFD'};
 
     return (
 
     <Fragment>
         <div className={styles.Card}>
-            <div>
-                <p>{character.name}</p>
-                <p>{character.status}</p>
+            <div className={styles.Presentation}>
+                <img className={styles.Photo} src={`./images/${character.id}.jpeg`} alt="#" />
+                <div className={styles.NameAndStatus}>
+                    <p className={styles.Name}>{character.name}</p>
+                    <p>{character.status}</p>
+                </div>
+
             </div>
-            <div>
-                <p>{isHuman ? <IoIosMan /> : <FaUserAstronaut />} {character.species}</p>
-                <p>{isFemale ? <BiFemaleSign /> : <BiMaleSign />} {character.gender}</p>
-                <p><MdLocationOn /> {character.location}</p>
-                <p><AiFillCalendar /> {formatCreated()}</p>
+            <div className={styles.Details}>
+                <p>{isHuman ? <IoIosMan style={iconsStyle}/> : <FaUserAstronaut style={iconsStyle}/>} {character.species}</p>
+                <p>{isFemale ? <BiFemaleSign style={iconsStyle}/> : <BiMaleSign style={iconsStyle}/>} {character.gender}</p>
+                <p><MdLocationOn style={iconsStyle}/> {character.location}</p>
+                <p><AiFillCalendar style={iconsStyle}/> {formatCreated()}</p>
             </div>
         </div>
     </Fragment>
