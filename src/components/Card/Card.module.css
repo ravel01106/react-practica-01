@@ -40,7 +40,7 @@ p, button{
     flex-wrap: wrap;
     gap: 0.5rem;
     margin-top: 2.3rem;
-    justify-content: center;
+    justify-content: space-between;
 }
 button{
     padding: 0.3rem 6.3rem;
